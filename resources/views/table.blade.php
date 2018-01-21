@@ -1,0 +1,35 @@
+@extends('partial.table')
+@section('tab')
+<table class="table">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							Jenis_Barang
+						</th>
+						<th>
+							Harga
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				@php
+					$no=1;
+				@endphp
+				@foreach($a as $data)
+					<tr>
+						<td>
+							{{$no++}}
+						</td>
+						<td>
+							{{$data->Barang}}
+						</td>
+						<td>
+							{{$data->Harga}}
+						</td>
+				@endforeach
+				</tbody>
+			</table>
+@endsection
